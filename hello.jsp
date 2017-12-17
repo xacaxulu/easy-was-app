@@ -1,6 +1,6 @@
 <html>
 <head>
-<title>Sample Application JSP Page</title>
+<title>Some Change Sample Application JSP Page</title>
 </head>
 <body bgcolor=white>
 
