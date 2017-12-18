@@ -1,1 +1,11 @@
 language: java
+
+services:
+  - docker
+
+before_install:
+  - jar -cvf Sample1.war META-INF/ WEB-INF/ hello.jsp images/ index.html 
+  - docker pull xacaxulu/was-easy-dockerimage
+  - docker run -d -p 80:9080 -p 443:9443 -v Sample1.war:/config/dropins/ easy-was-app
+  - docker ps -a
+
